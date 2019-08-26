@@ -1,0 +1,57 @@
+body {
+    color: black;
+    margin: auto;
+    background-color: #d5f5ee;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: black;
+    font-family: sans-serif;
+    font-size: 70px;
+    text-shadow: 2px 2px white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 100px;
+    background-color: black;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    text-decoration: black;
+    Top-padding: 4px;
+}
+
+.d-block {
+    width: 500px;
+    heght: 690px;
+}
+
+.footer {
+    background-color: white;
+    font-size: 15px;
+    font-family: cursive;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+#signup {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    dislplay: block;
+}
