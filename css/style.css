@@ -4,6 +4,21 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+#image {
+    margin: 0, 0, 0, 0;
+    width: 50%;
+    margin-left: 300px;
+    opacity: .3;
+}
+
+#image:hover {
+    width: 75%;
+    margin: auto;
+    background: contain;
+    transition: 2s;
+    opacity: .9;
+}
+
 .container {
     text-align: center;
     position: absolute;
@@ -97,4 +112,8 @@ h2 {
     color: white;
     border: none;
     font-size: 20px;
+}
+
+.card-img-top:hover {
+    background-color: yellow
 }
