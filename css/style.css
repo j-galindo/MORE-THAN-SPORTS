@@ -68,6 +68,10 @@ h1 {
     background-color: black;
 }
 
+#gif {
+    width: 100%
+}
+
 a {
     color: black;
     font-size: 30px;

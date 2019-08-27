@@ -14,6 +14,11 @@ $("#home").click(function() {
     $("#articles").hide();
 })
 
+$("#button").click(function() {
+    $(".videowrapper").hide();
+
+})
+
 
 
 document.querySelector("#topstories").onclick = function() {
@@ -82,14 +87,30 @@ document.querySelector("#topstories").onclick = function() {
 
 document.querySelector("#button").onclick = function() {
     axios.get(`https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=OojsGeEqutJg4lecTcp2iLYiSHsBZx5r`).then((articles) => {
-        console.log(articles.data.results)
-        let input = document.querySelector("#navbarSupportedContent > form > input")
-        let array = articles.data.results
-        for (i = 0; i < array.length; i++) {
-            if (input.value == array[i]) {}
-            console.log(greatJOb)
-        }
 
+        console.log(articles.data.results)
+
+        let input = document.querySelector("#navbarSupportedContent > form > input").value;
+        // if (input > 19) {
+
+        //     alert("Please Enter a number of 1-19")
+        // }
+
+        console.log(input)
+        var search = input.filter(function(item) {
+            return item.tile == input;
+        });
+
+        updateHTML = `<div class="card-body">
+        <h5 class="card-title">(1)Top Story</h5>
+        <p class="card-text">
+        <a href= "${articles.data.results[input].url}">${articles.data.results[input].title}</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    <img src="${articles.data.results[input].multimedia[4].url}" class="card-img-top" alt="...">`
+
+        document.querySelector(".card").innerHTML = updateHTML
     })
 }
 
