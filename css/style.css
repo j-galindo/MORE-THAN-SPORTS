@@ -114,6 +114,21 @@ h2 {
     font-size: 20px;
 }
 
-.card-img-top:hover {
-    background-color: yellow
+#gif {
+    animation: down 2s;
+    animation-fill-mode: forwards;
+}
+
+#animate {
+    animation: down 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    0% {
+        margin-top: -400px;
+    }
+    100% {
+        margin-top: 0px;
+    }
 }
