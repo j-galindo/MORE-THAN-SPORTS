@@ -5,6 +5,16 @@ $(document).ready(function() {
     });
 });
 
+$("#topstories").click(function() {
+    $(".videowrapper").hide();
+})
+
+$("#home").click(function() {
+    $(".videowrapper").show();
+    $("#articles").hide();
+})
+
+
 
 document.querySelector("#topstories").onclick = function() {
     axios.get(`https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=OojsGeEqutJg4lecTcp2iLYiSHsBZx5r`).then((articles) => {
@@ -66,6 +76,20 @@ document.querySelector("#topstories").onclick = function() {
         </div>
         <img src="${articles.data.results[17].multimedia[4].url}" class="card-img-top" alt="...">`
         document.querySelector('.card').innerHTML = topstoryHTML
+    })
+}
+
+
+document.querySelector("#button").onclick = function() {
+    axios.get(`https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=OojsGeEqutJg4lecTcp2iLYiSHsBZx5r`).then((articles) => {
+        console.log(articles.data.results)
+        let input = document.querySelector("#navbarSupportedContent > form > input")
+        let array = articles.data.results
+        for (i = 0; i < array.length; i++) {
+            if (input.value == array[i]) {}
+            console.log(greatJOb)
+        }
+
     })
 }
 

@@ -1,16 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.container span {
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+
+.text1 {
+    color: red;
+    background-color: transparent;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 3s 1;
+}
+
+.text2 {
+    font-size: 25px;
+}
+
+@keyframes text {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+        background: transparent;
+        transition-timing-function: linear;
+        transition-duration: 1000s;
+    }
+}
+
 body {
-    color: black;
+    color: lightgray;
     margin: auto;
-    background-color: #d5f5ee;
-    background-size: cover;
+    background-color: transparent;
 }
 
 h1 {
+    color: black;
     text-align: center;
     text-decoration: black;
     font-family: sans-serif;
-    font-size: 70px;
-    text-shadow: 2px 2px white;
+    font-size: 30px;
+    margin: 0 auto;
+    opacity: .5;
 }
 
 .navbar {
@@ -32,17 +79,6 @@ h2 {
     color: black;
     text-align: center;
     text-decoration: black;
-    Top-padding: 4px;
-}
-
-.footer {
-    background-color: white;
-    font-size: 15px;
-    font-family: cursive;
-    text-align: center;
-    display: flex;
-    justify-items: flex-end;
-    position: relative;
 }
 
 #signupstories {
