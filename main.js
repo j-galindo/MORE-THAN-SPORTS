@@ -78,7 +78,7 @@ document.querySelector("#button").onclick = function() {
         let array = articles.data.results.title;
 
         let input = document.querySelector("#navbarSupportedContent > form > input").value;
-        if (input > 19) {
+        if (input > 19 || input === "") {
 
             alert("Please Enter a number of 1-19")
         }
@@ -89,13 +89,13 @@ document.querySelector("#button").onclick = function() {
             // });
 
         updateHTML = `<div class="card-body">
-      <h5 class="card-title">(1)Top Story</h5>
+      <h5 class="card-title">Article found</h5>
       <p class="card-text">
       <a href= "${articles.data.results[input].url}">${articles.data.results[input].title}</a>
       </p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
-  <img src="${articles.data.results[input].multimedia[4].url}" class="card-img-top" alt="...">`
+  <img id="image"src="${articles.data.results[input].multimedia[4].url}" class="card-img-top" alt="...">`
 
         document.querySelector(".card").innerHTML = updateHTML
     })
